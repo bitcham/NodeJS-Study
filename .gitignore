@@ -1,2 +1,4 @@
 node_modules/
 message.txt
+package-lock.json
+package.json
