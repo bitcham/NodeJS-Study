@@ -6,13 +6,20 @@ const rootDir = require('../util/path');
 
 const router = express.Router();
 
-router.use('/add-product', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+const products = [];
+
+router.get('/add-product', (req, res, next) => {
+    // Use render instead of sendFile to be consistent with the template engine
+    res.render('add-product', {
+        docTitle: 'Add Product'
+    });
 });
 
+
 router.post('/add-product', (req, res) => {
-    console.log(req.body);
+    products.push({ title: req.body.title });
     res.redirect('/');
 });
 
-module.exports = router;
+exports.routes = router;
+exports.products = products;
