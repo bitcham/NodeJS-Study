@@ -9,9 +9,12 @@ const router = express.Router();
 const products = [];
 
 router.get('/add-product', (req, res, next) => {
-    // Use render instead of sendFile to be consistent with the template engine
     res.render('add-product', {
-        docTitle: 'Add Product'
+        docTitle: 'Add Product',
+        path: '/admin/add-product',
+        activeAddProduct: true,
+        productCSS: true,
+        formCSS: true,
     });
 });
 
