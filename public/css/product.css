@@ -5,6 +5,21 @@
     display: block;
 }
 
+.product-detail {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.product-detail img {
+    width: 10%;
+    height: auto;
+    max-height: 10rem;
+    display: block;
+    margin: 0 auto;
+}
+
 .product-item {
     width: 20rem;
     max-width: 95%;
